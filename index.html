@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla</title>
+    <!-- CSS de bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CH18</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Música</a></li>
+                  <li><a class="dropdown-item" href="#">Fotos</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                  <li><a class="dropdown-item" href="#">Recuerdos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    
+    <!-- Descripción -->
+    <div class="container">
+        <!-- Descripción Generation -->
+        <div class="row">
+            <div class="col">
+                <h1>Estar en Generation</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ad dolor quam voluptate vero deserunt voluptatum! Sequi officia nostrum quia explicabo neque? Deserunt adipisci quo quis quod dolore soluta dolorem?</p>
+                <p><a href="https://mexico.generation.org/" target="_blank" class="btn btn-success">Visita Generation</a></p>
+            </div>
+        </div>
+        <!-- Descripción HTML, CSS, JSS -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2>HTML</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cum repellendus eum, impedit fuga, repudiandae praesentium iure unde, quo minus vero quam ex. Molestiae cumque accusamus velit incidunt recusandae delectus!</p>
+                <p><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" class="btn btn-success"><i class="fas fa-hotdog"></i> HTML</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>CSS</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit numquam tenetur possimus doloribus sit qui cupiditate, nisi ipsum alias voluptas sint iusto molestiae magni sed repudiandae veritatis dolorum optio esse.</p>
+                <p><a href="https://developer.mozilla.org/es/docs/Web/CSS" class="btn btn-success"><i class="fas fa-hamburger"></i> Aprende más sobre CSS</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>JS</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, ipsum totam atque explicabo repellat in repudiandae, recusandae accusantium, dicta aliquid placeat minima reiciendis eveniet facilis doloremque impedit vel provident. Neque.</p>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="btn btn-success"><i class="fas fa-pizza-slice"></i> Aprende más sobre JS</a></p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Pie de página -->
+    <footer class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Copyright 2022 Tutorial Bootstrap</p>
+            </div>
+            <div class="col-md-6">
+                <a href="#" target="_blank">Términos y condiciones</a>
+                <span> | </span>
+                <a href="#" target="_blank">Políticas de privacidad</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Ola -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#198754" fill-opacity="1" d="M0,224L34.3,213.3C68.6,203,137,181,206,165.3C274.3,149,343,139,411,128C480,117,549,107,617,117.3C685.7,128,754,160,823,186.7C891.4,213,960,235,1029,229.3C1097.1,224,1166,192,1234,192C1302.9,192,1371,224,1406,240L1440,256L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+      </svg>
+    
+    <!-- JS de bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
