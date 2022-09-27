@@ -73,3 +73,18 @@ function factorial(num){
     return (num*factorial(num-1));
 }
 console.log("Factorial de 4 = " + factorial(4));
+
+// +++++++++++++++ Rest Parameters ++++++++++++++++++
+
+// parameters => operation;
+// (param1, param2) => {
+// 
+// return data
+// }
+function sum(a, b, ...resto){
+    let suma = a+b;
+    resto.forEach(dato => {suma+=dato;});
+    return suma;
+}
+
+console.log("El resultado de sumar varios números es: " + sum(2,3,5,1));
