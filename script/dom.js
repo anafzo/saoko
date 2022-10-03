@@ -14,7 +14,7 @@ function encontrarPorId(){
     element.innerHTML = `El <em>texto</em> en el titulo es: ${element.innerHTML}`;
 }
 
-    function encontrarPorTagName(){
+function encontrarPorTagName(){
         // Obtenemos los objetos que cumplan con el tag indicado
         // getElementsByTagName() entrega una colección con los objetos encontrados
         let elements=document.getElementsByTagName("p");
