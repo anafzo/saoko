@@ -1,0 +1,29 @@
+{
+  "name": "saoko",
+  "version": "1.0.4",
+  "description": "Proyecto de Saoko de la CH18",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anafzo/saoko.git"
+  },
+  "keywords": [
+    "saoko",
+    "ch18",
+    "bootstrap",
+    "axios"
+  ],
+  "author": "Fernanda Zamudio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anafzo/saoko/issues"
+  },
+  "homepage": "https://github.com/anafzo/saoko#readme",
+  "dependencies": {
+    "axios": "^1.1.2",
+    "bootstrap": "^5.2.2"
+  }
+}

@@ -24,24 +24,38 @@ console.log("03 - Tercera instrucción");
 console.log("01 - Antes de la solicitud fetch:");
 
 function solicitudFetch(userToFind) {
-    fetch("https://reqres.in/api/users?delay=3").then(response => response.json()).then(conversion => {
-        let encontrado = conversion.data.find(
-            data => data.first_name === userToFind);
+    /* 
+    * fetch nos sirve para realizar solicitudes http (get, post, delete, etc.)
+    * Sintaxis: fetch( url , { configuración adicional } )
+    *                .then ( funcionCallBack )
+    * 
+    * funcionCallBack ( parámetro ){
+    * 
+    * }
+    */
+    fetch("https://reqres.i/api/users?delay=3")
+        .then(response => response.json())
+        .then(conversion => {
+            let encontrado = conversion.data.find(
+                data => data.first_name === userToFind);
 
-        console.log(encontrado);
+            console.log(encontrado);
 
-        const objUser = document.getElementById("user-name");
-        const objEmail = document.getElementById("user-email");
-        objUser.value = encontrado.first_name;
-        objEmail.value = encontrado.email;
-        usarLocalStorage();
-    });
+            const objUser = document.getElementById("user-name");
+            const objEmail = document.getElementById("user-email");
+            objUser.value = encontrado.first_name;
+            objEmail.value = encontrado.email;
+            usarLocalStorage();
+            return "hola";
+        })
+        .then(msj => console.log("Retorno del then anterior: " + msj))
+        .catch(err => console.log(err));
 }
 
 function leerUsuario(usuario) {
     console.log("Usuario a buscar: " + usuario);
-    const user = JSON.parse( localStorage.getItem("user"));
-    if (user.time > Date.now()){
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user && user.time > Date.now()) {
         leerLocalStorage();
     }
     else {
@@ -69,11 +83,51 @@ function leerLocalStorage() {
     const objUser = document.getElementById("user-name");
     const objEmail = document.getElementById("user-email");
 
-    const user = JSON.parse( localStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     console.log(user);
     objUser.value = user.name;
     objEmail.value = user.email;
 }
+
+function miPromesa() {
+    let promesa = new Promise((resolve, reject) => {
+        const expresion = false; // Cualquier operación
+
+        if (expresion) resolve("La promesa fue exitosa"); //Puedo devolver cualquier tipo de dato
+        else reject("La promesa NO se resolvió");
+    });
+    promesa
+        .then(response => console.log(response))
+        .catch(error => console.log(error))
+        .finally(console.log("Se terminó de ejecutar la promesa"));
+}
+
+let division = (a, b) =>{
+    return 
+}
+
+    // Async, await.
+    async function operaciones() {
+
+        // Los bloques try y catch nos sirven para el manejo de errores
+        try {
+            const result1 = await division(4, 0);
+            console.log("El resultado de la división es: " + result1);
+        }
+        catch (error) {
+            console.log("No se puede realizar la división: " + error);
+        }
+        try {
+            const result1 = await division(4, 2);
+            console.log("El resultado de la división es: " + result2);
+        }
+        catch (error) {
+            console.log("No se puede realizar la división: " + error);
+        }
+    }
+operaciones();
+
+
 
 
 /* DIFERENTES MANERAS DE ENCONTRAR DATOS EN OBJETOS
